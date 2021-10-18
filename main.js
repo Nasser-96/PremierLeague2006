@@ -232,7 +232,7 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
 
         if(txtSearch.value.toLowerCase() === json.data.standings[j].team.displayName.toLowerCase()){
           // try{
-            var getDiv = document.getElementById("myModal"+j)
+            const getDiv = document.getElementById("myModal"+j)
 
             // catch (e){
           
