@@ -76,7 +76,7 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
         btn.style.padding ="10px 20px 10px 20px"
         btn.style.borderRadius = "28px"
                 
-        par.style.color = "gray"
+        par.style.color = "white"
         img.style.justifyContent = "center"
         img.style.alignItems = "center"
         btn.style.background="#2980b9"
@@ -115,11 +115,10 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
         
         
         
-        parName.innerHTML = json.data.standings[i].team.displayName;
+          parName.innerHTML = json.data.standings[i].team.displayName;
           parName.className = "pInModel  name"
           parRank.innerHTML = "Team Rank: "+json.data.standings[i].stats[8].value;
           parRank.className = "pInModel"
-          
           parWins.innerHTML = "Wins in this season: " + json.data.standings[i].stats[0].value;
           parWins.className = "pInModel"
           parLosses.innerHTML = "Losses in this season: " + json.data.standings[i].stats[1].value;
@@ -215,12 +214,217 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
         
 // console.log(json.data.standings[i].team.displayName);
        //------------------------------ pop Up for table ---------------------------------
-        
+       
       }
       Body.append(gitBigDiv)
 
+      const getBtnT = document.querySelector(".tableS")
+      getBtnT.onclick =function(){
+        const createT = document.createElement("table")
+        const addHeadTable = createT.insertRow(0)
+        const cell1 = addHeadTable.insertCell(0)
+        const cell2 = addHeadTable.insertCell(1)
+        const cell3 = addHeadTable.insertCell(2)
+        const cell4 = addHeadTable.insertCell(3)
+        const cell5 = addHeadTable.insertCell(4)
+        const cell6 = addHeadTable.insertCell(5)
+        const cell7 = addHeadTable.insertCell(6)
+        const cell8 = addHeadTable.insertCell(7)
+        const cell9 = addHeadTable.insertCell(8)
+        const cell10 = addHeadTable.insertCell(9)
+        const size1 = window.matchMedia("(max-width: 567px)")
+        const size2 = window.matchMedia("(max-width: 768px)")
+        const size3 = window.matchMedia("(max-width: 1290px)")
 
+        createT.className= "tableGrid"
+        if(size1.matches || size2.matches ){
+        // const cell1 = addHeadTable.insertCell(0)
+        // const cell2 = addHeadTable.insertCell(1)
+        // const cell10 = addHeadTable.insertCell(2)
+        // const cell4 = addHeadTable.insertCell(3)
+        cell1.innerHTML = "Rank"
+        cell1.className = "row-content"
+        cell2.innerHTML = "Team"
+        cell2.className = "row-content"
+        // cell3.innerHTML = "Q"
+        // cell3.className = "row-content"
+        const cell10 = addHeadTable.insertCell(9)
+        cell10.innerHTML = "Points"
+        cell10.className = "row-content"
+          
+        }
+        else{
+        addHeadTable.className = "row-content"
 
+        cell1.innerHTML = "Rank"
+        cell1.className = "row-content"
+        cell2.innerHTML = "Team"
+        cell2.className = "row-content"
+        cell3.innerHTML = "Qualification"
+        cell3.className = "row-content"
+        cell4.innerHTML = "W"
+        cell4.className = "row-content"
+        cell5.innerHTML = "L"
+        cell5.className = "row-content"
+        cell6.innerHTML = "D"
+        cell6.className = "row-content"
+        cell7.innerHTML = "Goals For"
+        cell7.className = "row-content"
+        cell8.innerHTML = "Goals Against"
+        cell8.className = "row-content"
+        cell9.innerHTML = "Goal Diff"
+        cell9.className = "row-content"
+        cell10.innerHTML = "Points"
+        cell10.className = "row-content"
+      }
+        // myModal
+        const modalT = document.createElement("div");
+        modalT.className = "modal"
+        for(z=0;z<json.data.standings.length;z++){
+                  
+          // const span = document.querySelector(".close");
+          // const parRankT = document.createElement("p")
+          // const parDesT = document.createElement("p")
+          // const imgQ =document.createElement("img")
+          // const parWinsT = document.createElement("p")
+          // const parLossesT = document.createElement("p")
+          // const parDrawsT = document.createElement("p")
+          // const parGoalsForT = document.createElement("p")
+          // const parGoalsAgainstT = document.createElement("p")
+          // const parGoalDiffT = document.createElement("p")
+          // const parPointsT = document.createElement("p")
+          // const parTotalT = document.createElement("p")
+          // const closeModT = document.createElement("span")
+          var divContT = document.createElement("div")
+          const parNameT = document.createElement("p")
+          const imgDT = document.createElement("img")
+          divContT.className = "modal-content"
+            parNameT.innerHTML = json.data.standings[z].team.displayName;
+            // parRankT.innerHTML = json.data.standings[z].stats[8].value;
+            // parRankT.className = "pInModel"
+            // parNameT.className = "pInModel  name"
+            // parWinsT.innerHTML = 
+            // parWinsT.className = "pInModel"
+            // parLossesT.innerHTML = json.data.standings[z].stats[1].value;
+            // parLossesT.className = "pInModel"
+            // parDrawsT.innerHTML = 
+            // parDrawsT.className = "pInModel"
+            // parGoalsForT.innerHTML = json.data.standings[z].stats[4].value;
+            // parGoalsForT.className = "pInModel"
+            // parGoalsAgainstT.innerHTML = json.data.standings[z].stats[5].value;
+            // parGoalsAgainstT.className = "pInModel"
+            // parGoalDiffT.innerHTML = json.data.standings[z].stats[9].value;
+            // parGoalDiffT.className = "pInModel"
+            // parPointsT.innerHTML = json.data.standings[z].stats[6].value;
+            // parPointsT.className = "pInModel"
+            // parTotalT.innerHTML = json.data.standings[z].stats[12].summary;
+            // parTotalT.className = "pInModel"
+            
+          for(let o=0 ;o<json.data.standings.length;o++){
+            if (json.data.standings[z].stats[8].value === o+1){
+              // const divName = document.createElement("div")
+              const addHeadTable = createT.insertRow(-1)
+              const cell1 = addHeadTable.insertCell(0)
+              const cell2 = addHeadTable.insertCell(1)
+              const cell3 = addHeadTable.insertCell(2)
+              const cell4 = addHeadTable.insertCell(3)
+              const cell5 = addHeadTable.insertCell(4)
+              const cell6 = addHeadTable.insertCell(5)
+              const cell7 = addHeadTable.insertCell(6)
+              const cell8 = addHeadTable.insertCell(7)
+              const cell9 = addHeadTable.insertCell(8)
+              const cell10 = addHeadTable.insertCell(9)
+              cell1.innerHTML = z+1
+              cell1.className = "row-content"
+              imgDT.src =  json.data.standings[z].team.logos[0].href
+              imgDT.className = "imageT"
+              // divName.append(imgDT)
+              // divName.append(parNameT)
+              // parNameT.className="name3"
+              
+              const size1 = window.matchMedia("(max-width: 567px)")
+              const size2 = window.matchMedia("(max-width: 768px)")
+              const size3 = window.matchMedia("(max-width: 1290px)")
+              if (size1.matches || size2.matches){
+                cell2.append(imgDT)
+                cell2.append(parNameT) 
+                
+              //   try{
+              //     // if(json.data.standings[i].note.description.toString() === "Champions League qualifying"){
+              //   cell2.className = "row-content name2"
+              //   cell3.innerHTML = json.data.standings[z].note.description
+              
+              // }catch(e){
+  
+              // }
+                cell3.className = "row-content"
+                // cell4.innerHTML = json.data.standings[z].stats[0].value;
+                // cell4.className = "row-content"
+                // cell5.innerHTML = json.data.standings[z].stats[1].value;
+                // cell5.className = "row-content"
+                // cell6.innerHTML = json.data.standings[z].stats[2].value;
+                // cell6.className = "row-content"
+                // cell7.innerHTML = json.data.standings[z].stats[4].value;
+                // cell7.className = "row-content"
+                // cell8.innerHTML =  json.data.standings[z].stats[5].value;
+                // cell8.className = "row-content"
+                // cell9.innerHTML = json.data.standings[z].stats[9].value;
+                // cell9.className = "row-content"
+                cell10.innerHTML = json.data.standings[z].stats[6].value;
+                cell10.className = "row-content"
+                modalT.style.display = "grid";
+                window.onclick = function(event) {
+                  if (event.target == modalT) {
+                    modalT.style.display = "none";
+                  }
+                }
+              }
+              else{
+                cell2.append(imgDT)
+              cell2.append(parNameT) 
+              
+              try{
+                // if(json.data.standings[i].note.description.toString() === "Champions League qualifying"){
+              cell2.className = "row-content name2"
+              cell3.innerHTML = json.data.standings[z].note.description
+            
+            }catch(e){
+
+            }
+              cell3.className = "row-content"
+              cell4.innerHTML = json.data.standings[z].stats[0].value;
+              cell4.className = "row-content"
+              cell5.innerHTML = json.data.standings[z].stats[1].value;
+              cell5.className = "row-content"
+              cell6.innerHTML = json.data.standings[z].stats[2].value;
+              cell6.className = "row-content"
+              cell7.innerHTML = json.data.standings[z].stats[4].value;
+              cell7.className = "row-content"
+              cell8.innerHTML =  json.data.standings[z].stats[5].value;
+              cell8.className = "row-content"
+              cell9.innerHTML = json.data.standings[z].stats[9].value;
+              cell9.className = "row-content"
+              cell10.innerHTML = json.data.standings[z].stats[6].value;
+              cell10.className = "row-content"
+              modalT.style.display = "grid";
+              window.onclick = function(event) {
+                if (event.target == modalT) {
+                  modalT.style.display = "none";
+                }
+              }
+            }
+          }
+              
+              
+
+              }
+            
+        }
+        divContT.append(createT)        
+        modalT.append(divContT)
+        gitBigDiv.append(modalT)
+      }
+      Body.append(gitBigDiv)
        // ---------------------------search--------------------------------
       const getBtn = document.querySelector(".search")
       const txtSearch = document.querySelector(".txtSearch")
@@ -245,7 +449,7 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
           }
         }
       }
-       
+      
       }
       }
 //--------------------------------------------------------------------------

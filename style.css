@@ -6,14 +6,28 @@ body{
     width: 400%;
 
 }
+.tableGrid{
+  display: grid;
+    grid-template-columns: 1fr ;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgOpt{
+  background-repeat:round; 
+   height: 25rem; 
+   width: 94.5rem;
+}
 
 html{
-    width: 23.6rem;
+    
     /* height: rem; */
-    background: url("PremierLeague2006.jpg");
-    background-repeat:round;
-  background-attachment:fixed;  
-  background-size:cover;
+    background: linear-gradient(hsla(240, 6%, 72%, 0.747), rgba(101, 114, 128)), url("PremierLeague2006.jpg"); 
+    width: 23.6rem;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-repeat:no-repeat;
+    background-attachment:fixed;  
+    background-size:cover;
 }
 
 .divGrid{
@@ -95,4 +109,183 @@ ul {
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.1rem;
 
+  }
+
+  .row-content{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+
+  .imageT{
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .name2{
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    padding-left:0rem;
+  }
+
+  
+
+  @media screen and (max-width: 576px){
+    body{
+      display: grid;
+      grid-template-columns: 1fr ;
+      justify-content: center;
+      align-items: center;
+      
+      width: 34rem;
+  
+  }
+  .imgOpt{
+    /* background-repeat:round;  */
+     height: 10rem; 
+     width:34rem;
+  }
+  .imageT{
+    width: 1rem;
+    height: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  html{
+    background-repeat: no-repeat;
+    background: linear-gradient(hsla(240, 6%, 72%, 0.747), rgba(101, 114, 128)), url("PremierLeague2006.jpg"); 
+    background: url("PremierLeague2006.jpg");
+    width: 32rem;
+    background-repeat:round;
+    background-attachment:fixed;  
+    /* background-size:cover; */
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 0ch;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  .divGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+.row-content{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 0px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  }
+
+  @media screen and (max-width: 768px){
+    body{
+      display: grid;
+      grid-template-columns: 1fr ;
+      justify-content: center;
+      align-items: center;
+      
+      width: 46rem;
+  
+  }
+  .imageT{
+    width: 1rem;
+    height: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .imgOpt{
+    /* background-repeat:round;  */
+     height: 15rem; 
+     width:46rem;
+  }
+  html{
+    background-repeat: no-repeat;
+    /* height: rem; */
+    background: url("PremierLeague2006.jpg");
+    background: linear-gradient(hsla(240, 6%, 72%, 0.747), rgba(101, 114, 128)), url("PremierLeague2006.jpg"); 
+    width: 32rem;
+    background-repeat:round;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-attachment:fixed;  
+    /* background-size:cover; */
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+  ul {
+    list-style-type: none;
+    margin: 0;
+    margin-top: 0ch;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  .divGrid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+.row-content{
+    padding-right: 1rem;
+    padding-left: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+  }
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 0px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
   }
