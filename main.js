@@ -8,6 +8,8 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
   return response.json()})
   .then(function (json) { 
       for(i=0;i<json.data.standings.length;i++){
+// git picture and name of the team and display it with button for each one
+
 
         var gitBigDiv = document.querySelector(".bigOne")
         const par = document.createElement("p");
@@ -74,7 +76,6 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
         
 
         smDiv.style.backgroundRepeat = "no-repeat"
-        // smDiv.style.backgroundAttachment = "fixed"
         smDiv.style.backgroundPosition = "center"
 
         smDiv.append(img);
