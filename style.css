@@ -6,6 +6,12 @@ body{
     width: 400%;
 
 }
+.active{
+  margin: 1px;
+  border-style:solid;
+  border-color: burlywood;
+  color: burlywood;
+}
 .tableGrid{
   display: grid;
     grid-template-columns: 1fr ;
