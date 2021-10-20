@@ -369,5 +369,13 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
       
       }
       }
+
+
+    txtSearch.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+          getBtn.click();
+    }
+});
 // --------------------------- search END --------------------------------
   })
