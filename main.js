@@ -65,10 +65,13 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
         btn.style.borderRadius = "28px"
                 
         par.style.color = "white"
+        par.style.fontSize = "1.5rem"
+        par.style.fontWeight ="bold"
         img.style.justifyContent = "center"
         img.style.alignItems = "center"
         btn.style.background="#2980b9"
         btn.style.color = "white"
+        
 
         smDiv.style.backgroundRepeat = "no-repeat"
         // smDiv.style.backgroundAttachment = "fixed"
