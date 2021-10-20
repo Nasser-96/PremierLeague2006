@@ -28,6 +28,8 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
         smDiv.style.display = "grid"
         smDiv.style.justifyContent="center"
         smDiv.style.alignItems = "center"
+        smDiv.style.justifyItems = "center"
+        smDiv.style.alignContent = "center"
         par.style.display = "grid"
         par.style.justifyContent = "center"
         par.style.alignItems = "center"
@@ -49,6 +51,8 @@ fetch('https://api-football-standings.azharimm.site/leagues/eng.1/standings?seas
           btn.style.width = "12rem";
           img.style.justifyContent = "center"
           img.style.alignItems = "center"
+          img.style.justifyItems = "center"
+          img.style.alignContent = "center"
           btn.style.background = "#3498db"
         }
         btn.onmouseout = function(){
